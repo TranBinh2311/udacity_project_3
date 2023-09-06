@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "feed/**"
+      - "udagram-api-feed/**"
 
 jobs:
   deploy:
