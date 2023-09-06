@@ -8,7 +8,7 @@ const router: Router = Router();
 router.use("/auth", AuthRouter);
 
 router.get("/", async (req: Request, res: Response) => {
-  res.send("Hello Every one!");
+  res.send("Hello Every one hehe!");
 });
 
 router.get("/:id", async (req: Request, res: Response) => {
