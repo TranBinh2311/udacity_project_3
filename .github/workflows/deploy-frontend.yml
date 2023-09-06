@@ -1,4 +1,4 @@
-name: Deploy feed to production
+name: Deploy frontend to production
 
 on:
   pull_request:
