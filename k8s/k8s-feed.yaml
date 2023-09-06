@@ -19,7 +19,7 @@ spec:
         - name: restapi-feeds
           image: 892958774317.dkr.ecr.us-east-1.amazonaws.com/feed:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8081
           env:
             - name: POSTGRES_USERNAME
               value: "postgres"
@@ -52,7 +52,7 @@ metadata:
     run: feeds-app
 spec:
   ports:
-    - port: 80
+    - port: 8081
       protocol: TCP
   selector:
     run: feeds-app
