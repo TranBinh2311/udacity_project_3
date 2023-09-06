@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: restapi-feeds
-          image: binhtv7/restapi-feeds
+          image: 892958774317.dkr.ecr.us-east-1.amazonaws.com/feed:latest
           ports:
             - containerPort: 80
           env:
