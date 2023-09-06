@@ -3,8 +3,8 @@ name: Deploy reverseproxy to production
 on:
   pull_request:
     branches: [main]
-    paths:
-      - "nginx/**"
+    # paths:
+    #   - "nginx/**"
 
 jobs:
   deploy:
@@ -39,7 +39,7 @@ jobs:
           ECR_REPOSITORY: nginx
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          cd udagram-api-feed
+          cd nginx
           pwd
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
           docker push -a $ECR_REGISTRY/$ECR_REPOSITORY

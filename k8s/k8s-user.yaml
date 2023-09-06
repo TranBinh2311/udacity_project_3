@@ -52,7 +52,7 @@ metadata:
     run: users-app
 spec:
   ports:
-    - port: 80
+    - port: 8082
       protocol: TCP
   selector:
     run: users-app

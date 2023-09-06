@@ -3,8 +3,8 @@ name: Deploy users to production
 on:
   pull_request:
     branches: [main]
-    paths:
-      - "udagram-api-user/**"
+    # paths:
+    #   - "udagram-api-user/**"
 
 jobs:
   deploy:
@@ -39,7 +39,7 @@ jobs:
           ECR_REPOSITORY: users
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          cd udagram-api-feed
+          cd udagram-api-user
           pwd
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
           docker push -a $ECR_REGISTRY/$ECR_REPOSITORY
