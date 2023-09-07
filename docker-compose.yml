@@ -22,7 +22,7 @@ services:
       - POSTGRES_USERNAME=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST=database-3.cwd19revbd1j.us-east-1.rds.amazonaws.com
-      - POSTGRES_DB=lesson4
+      - POSTGRES_DB=postgres
       - AWS_BUCKET=test-ff1732da23c2-dev
       - AWS_REGION=us-east-1
       - AWS_PROFILE=default
@@ -35,7 +35,7 @@ services:
       - POSTGRES_USERNAME=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST=database-3.cwd19revbd1j.us-east-1.rds.amazonaws.com
-      - POSTGRES_DB=lesson4
+      - POSTGRES_DB=postgres
       - AWS_BUCKET=test-ff1732da23c2-dev
       - AWS_REGION=us-east-1
       - AWS_PROFILE=default
@@ -62,7 +62,7 @@ services:
       - POSTGRES_USERNAME=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST=database-3.cwd19revbd1j.us-east-1.rds.amazonaws.com
-      - POSTGRES_DB=lesson4
+      - POSTGRES_DB=postgres
       - AWS_BUCKET=test-ff1732da23c2-dev
       - AWS_REGION=us-east-1
       - AWS_PROFILE=default

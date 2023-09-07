@@ -16,19 +16,17 @@ spec:
         app: frontend-app
     spec:
       containers:
-        - name: restapi-frontend
-          image: 892958774317.dkr.ecr.us-east-1.amazonaws.com/frontend:latest
-          ports:
-            - containerPort: 80
+        - name: frontend-app
+          image: binhtv7/project_03_microservices-frontend:latest
           env:
             - name: POSTGRES_USERNAME
               value: "postgres"
             - name: POSTGRES_PASSWORD
               value: "postgres"
             - name: POSTGRES_DB
-              value: "lesson4"
+              value: "lesson3"
             - name: POSTGRES_HOST
-              value: "database-3.cwd19revbd1j.us-east-1.rds.amazonaws.com"
+              value: "database-1.c5ejl9ytcwto.us-east-1.rds.amazonaws.com"
             - name: AWS_REGION
               value: "us-east-1"
             - name: AWS_PROFILE
@@ -53,6 +51,7 @@ metadata:
 spec:
   ports:
     - port: 80
+      targetPort: 80
       protocol: TCP
   selector:
-    run: frontend-app
+    app: frontend-app
